@@ -1,0 +1,35 @@
+{
+  "name": "bun-file-server",
+  "version": "0.0.3",
+  "description": "A simple and fast file server powered by Bun",
+  "type": "module",
+  "module": "index.ts",
+  "bin": "./index.ts",
+  "files": [
+    "index.ts",
+    "utils.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "bun run --watch index.ts"
+  },
+  "keywords": [
+    "bun",
+    "file",
+    "server",
+    "http",
+    "cli"
+  ],
+  "author": "Lawson Oates",
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.1",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
