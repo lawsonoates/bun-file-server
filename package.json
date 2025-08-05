@@ -1,6 +1,6 @@
 {
   "name": "bun-file-server",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple and fast file server powered by Bun",
   "type": "module",
   "module": "index.ts",
@@ -11,7 +11,8 @@
     "README.md"
   ],
   "scripts": {
-    "dev": "bun run --watch index.ts"
+    "dev": "bun run --watch index.ts",
+    "build:executables": "bun build ./index.ts --compile --minify --sourcemap --bytecode --outfile dist/bun-file-server-linux-x64 --target bun-linux-x64 && bun build ./index.ts --compile --minify --sourcemap --bytecode --outfile dist/bun-file-server-linux-arm64 --target bun-linux-arm64 && bun build ./index.ts --compile --minify --sourcemap --bytecode --outfile dist/bun-file-server-windows-x64.exe --target bun-windows-x64 && bun build ./index.ts --compile --minify --sourcemap --bytecode --outfile dist/bun-file-server-darwin-arm64 --target bun-darwin-arm64 && bun build ./index.ts --compile --minify --sourcemap --bytecode --outfile dist/bun-file-server-darwin-x64 --target bun-darwin-x64"
   },
   "keywords": [
     "bun",
@@ -22,6 +23,10 @@
   ],
   "author": "Lawson Oates",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lawsonoates/bun-file-server"
+  },
   "engines": {
     "bun": ">=1.0.0"
   },
